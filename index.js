@@ -6,7 +6,6 @@ const path = require('path'); // Add this line to import the path module
 
 connectToMongo();
 const app = express();
-const port = process.env.PORT;
 
 app.use(express.static(path.join(__dirname, 'build')));
 
@@ -21,6 +20,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build/index.html'));
 });
 
-app.listen(port, () => {
-  console.log(`app listening on port http://localhost:${port}`);
+app.listen(8000, () => {
+  console.log(`app listening on port http://localhost:${8000}`);
 });
