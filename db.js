@@ -13,8 +13,6 @@ const connectToMongo = async()=>{
       console.error("Error connecting to MongoDB:", err);
       setTimeout(connectToMongo, 5000); // Retry after 5 seconds
     }
-   // await mongoose.connect('mongodb+srv://pankajmalankiyadev:3yMd64FRG7a79UDo@listing-db.fwy64.mongodb.net/listing?retryWrites=true&w=majority&appName=listing-db&tls=true');
-   // console.log("connected to mongodb successfuly")
 }
 
 module.exports = connectToMongo;
